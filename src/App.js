@@ -1,7 +1,11 @@
 import React from "react";
+import Potato from "./Potato";
 
 function App() {
-  return  <dinv> heelllo </dinv>;
+  return  <div>
+             heelllo
+             <Potato />
+          </div>;
 }
 
 export default App;
