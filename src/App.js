@@ -1,10 +1,22 @@
 import React from "react";
-import Potato from "./Potato";
+
+function Potato(props){
+  console.log(props);
+  return  <h3>I Love {props.name}</h3>;
+}
+
 
 function App() {
   return  <div>
              heelllo
-             <Potato />
+             <Potato
+              name = 'kimchi' 
+              papap={true} 
+              ham = {["aaa","bbb","cc",]} 
+             />
+             <Potato
+              name = 'ramen' 
+              />
           </div>;
 }
 
