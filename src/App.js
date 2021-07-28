@@ -16,7 +16,8 @@ Potato.propTypes = {
   image: PropTypes.string.isRequired,
   rating: PropTypes.number
 };
-
+  
+  
 
 const potatoLike = [
   {
