@@ -17,7 +17,6 @@ Potato.propTypes = {
   rating: PropTypes.number
 };
   
-  
 
 const potatoLike = [
   {
