@@ -11,9 +11,17 @@ class App extends React.Component{
   }
 
   add = ()=>{
+    //아래 코드는 동작하지 않는다. why?
+    //reder function을 refresh 하지 않기 때문
+    //this.state.count = 1;
+    
+    //setState를 호출하면 react는 state를 refresh하고 
+    //render function을 호출한다.
+    this.setState(current=>({count: current.count + 1}));
     console.log("add");
   };
   minus = ()=>{
+    this.setState(current=>({count: current.count - 1}));
     console.log("minus");
   };
 
