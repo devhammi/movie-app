@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 class App extends React.Component{
   //react는 자동적으로 class component의 render method를 실행한다.
@@ -8,6 +7,22 @@ class App extends React.Component{
   // state는 object이고 component의 data를 넣을 공간이 있고 데이터는 변한다.
   state = {
     count: 0
+  }
+  constructor(props){
+    super(props);
+    console.log("constructor test");
+  }
+  //컴포넌트 마운트 후 실행.
+  componentDidMount(){
+    console.log("component redered");
+  }
+  //컴포넌트 update 후 실행. setState 시 실행됨.
+  componentDidUpdate(){
+    console.log("I just updated");
+  }
+  //component 종료 시 실행.
+  componentWillUnmount(){
+    console.log("Goodbye, cruel");
   }
 
   add = ()=>{
@@ -27,6 +42,7 @@ class App extends React.Component{
 
 
  render(){
+   console.log("reder test");
    return (
     <div>
       <h1>the number is : {this.state.count}</h1>
@@ -36,5 +52,5 @@ class App extends React.Component{
  }
 }
 
-
+                        
 export default App;
